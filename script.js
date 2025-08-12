@@ -1,11 +1,11 @@
-// Part 1: Setting up classes
+// ========== Part 1: Setting up classes ===========
 class Product {
   constructor(name, price, quantity) {
     this.name = name;
     this.price = price;
     this.quantity = quantity;
   }
-  // Part 1.2: Constructor and methods for getTotalValue() and toString()
+  // Constructor and methods for getTotalValue() and toString()
   getTotalValue() {
     return this.price * this.quantity;
   }
@@ -15,14 +15,14 @@ class Product {
       2
     )}, Quantity: ${this.quantity}`;
   }
-  // Part 3: Static Methods and Properties
+  // ========== Part 3: Static Methods and Properties ==========
   static applyDiscount(products, discount) {
     products.forEach((product) => {
       product.price -= product.price * discount;
     });
   }
 }
-// Part 2: Adding Inheritance (subclass Perishable Product)
+// ========== Part 2: Adding Inheritance (subclass Perishable Product) ==========
 class PerishableProduct extends Product {
   constructor(name, price, quantity, expirationDate) {
     super(name, price, quantity); // Call parent constructor
@@ -43,7 +43,7 @@ const example2 = new PerishableProduct("Milk", 1.5, 10, "2025-09-12");
 console.log(example1);
 console.log(example2);
 
-// Part 4: Store Management
+// ======== Part 4: Store Management =========
 class Store {
   constructor() {
     this.inventory = [];
@@ -68,7 +68,7 @@ class Store {
     );
   }
 }
-// Part 5: Testing the system
+// ======== Part 5: Testing the system ===========
 // Create 5 products in Total (2 products with subclass)
 const p1 = new Product("Mango", 3.5, 50);
 const p2 = new Product("Banana", 0.9, 100);
