@@ -16,6 +16,11 @@ class Product {
     )}, Quantity: ${this.quantity}`;
   }
   // Part 3: Static Methods and Properties
+  static applyDiscount(products, discount) {
+    products.forEach((product) => {
+      product.price -= product.price * discount;
+    });
+  }
 
   // Part 2: Adding Inheritance
 
