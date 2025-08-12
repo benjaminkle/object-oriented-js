@@ -69,3 +69,5 @@ class Store {
   }
 }
 // Part 5: Testing the system
+// Create 5 products in Total (2 products with subclass)
+const p1 = new Product("Mango", 3.5, 50);
