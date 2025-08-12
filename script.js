@@ -34,8 +34,14 @@ class PerishableProduct extends Product {
     return `${super.toString()}, Expiration Date: ${this.expirationDate}`;
   }
 }
+console.log(
+  "---- Testing two sample instances with PerishableProduct class ----"
+);
+
 const example1 = new PerishableProduct("Egg", 0.7, 12, "2025-09-02");
+const example2 = new PerishableProduct("Milk", 1.5, 10, "2025-09-12");
 console.log(example1);
+console.log(example2);
 
 // Part 4: Store Management
 class Store {
