@@ -21,9 +21,18 @@ class Product {
       product.price -= product.price * discount;
     });
   }
-
-  // Part 2: Adding Inheritance
-
-  // Part 4: Store Management
-  // Part 5: Testing the system
 }
+// Part 2: Adding Inheritance (subclass Perishable Product)
+class PerishableProduct extends Product {
+  constructor(name, price, quantity, expirationDate) {
+    super(name, price, quantity); // Call parent constructor
+    this.expirationDate = expirationDate;
+  }
+
+  // Override toString to add expiration date
+  toString() {
+    return `${super.toString()}, Expiration Date: ${this.expirationDate}`;
+  }
+}
+// Part 4: Store Management
+// Part 5: Testing the system
