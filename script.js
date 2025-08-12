@@ -75,3 +75,10 @@ const p2 = new Product("Banana", 0.9, 100);
 const p3 = new Product("Whole Organic Chicken", 11.0, 30);
 const p4 = new PerishableProduct("Butter", 7.5, 10, "2025-12-31");
 const p5 = new PerishableProduct("Yogurt", 3.5, 25, "2025-09-15");
+// Add products to STORE object
+const myStore = new Store();
+myStore.addProduct(p1);
+myStore.addProduct(p2);
+myStore.addProduct(p3);
+myStore.addProduct(p4);
+myStore.addProduct(p5);
