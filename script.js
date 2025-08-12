@@ -35,4 +35,28 @@ class PerishableProduct extends Product {
   }
 }
 // Part 4: Store Management
+class Store {
+  constructor() {
+    this.inventory = [];
+  }
+
+  addProduct(product) {
+    this.inventory.push(product);
+  }
+
+  getInventoryValue() {
+    return this.inventory.reduce(
+      (total, product) => total + product.getTotalValue(),
+      0
+    );
+  }
+
+  findProductByName(name) {
+    return (
+      this.inventory.find(
+        (product) => product.name.toLowerCase() === name.toLowerCase()
+      ) || null
+    );
+  }
+}
 // Part 5: Testing the system
