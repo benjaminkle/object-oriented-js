@@ -73,3 +73,4 @@ class Store {
 const p1 = new Product("Mango", 3.5, 50);
 const p2 = new Product("Banana", 0.9, 100);
 const p3 = new Product("Whole Organic Chicken", 11.0, 30);
+const p4 = new PerishableProduct("Butter", 7.5, 10, "2025-12-31");
