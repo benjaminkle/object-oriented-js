@@ -34,14 +34,13 @@ class PerishableProduct extends Product {
     return `${super.toString()}, Expiration Date: ${this.expirationDate}`;
   }
 }
-console.log(
-  "---- Testing two sample instances with PerishableProduct class ----"
-);
+console.log("--------------- Testing PerishableProduct class ---------------");
 
 const example1 = new PerishableProduct("Egg", 0.7, 12, "2025-09-02");
 const example2 = new PerishableProduct("Milk", 1.5, 10, "2025-09-12");
 console.log(example1);
 console.log(example2);
+console.log("---------------------------------------------------------------");
 
 // ======== Part 4: Store Management =========
 class Store {
@@ -82,6 +81,11 @@ myStore.addProduct(p2);
 myStore.addProduct(p3);
 myStore.addProduct(p4);
 myStore.addProduct(p5);
+
+console.log("----------------Testing System with 5 products-----------------");
+
+console.log(p1, p2, p3, p4, p5);
+
 // Display total inventory value BEFORE discount
 console.log(
   "Total Inventory Value (Before Discount): $",
@@ -94,3 +98,14 @@ console.log(
   "Total Inventory Value (After 15% Discount): $",
   myStore.getInventoryValue().toFixed(2)
 );
+console.log();
+
+// Find and print details of a product by name
+const searchName = "Whole Organic Chicken";
+const foundProduct = myStore.findProductByName(searchName);
+
+if (foundProduct) {
+  console.log(`Product found: ${foundProduct.toString()}`);
+} else {
+  console.log(`Product '${searchName}' not found.`);
+}
