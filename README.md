@@ -14,5 +14,3 @@ A JavaScript lab using **classes, inheritance, and static methods** to manage st
 1. Create `Product` and `PerishableProduct` objects.
 2. Add them to a `Store`.
 3. Get inventory value, apply discounts, search products.
-
-## Example
