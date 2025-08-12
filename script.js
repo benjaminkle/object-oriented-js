@@ -82,3 +82,8 @@ myStore.addProduct(p2);
 myStore.addProduct(p3);
 myStore.addProduct(p4);
 myStore.addProduct(p5);
+// Display total inventory value BEFORE discount
+console.log(
+  "Total Inventory Value (Before Discount): $",
+  myStore.getInventoryValue().toFixed(2)
+);
